@@ -1,0 +1,102 @@
+@charset "utf-8";
+@media screen and (max-width: 768px),
+(device-height: 558px) and (-webkit-min-device-pixel-ratio: 2) {
+  img {
+    max-width: 100%;
+  }
+  #timerBox{
+    font-size: 122px;
+  }
+  #timerSetting div {
+    display: inline-block;
+    border: 2px solid #666;
+    color: #666;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 27px;
+    margin-bottom: 3px;
+  }
+  h1{
+    font-size: 32px;
+  }
+  .red_tiles .tile, .blue_tiles .tile{
+    font-size: 19px;
+    height: 42px;
+    line-height: 42px;
+  }
+  .title {
+    line-height: 1;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    font-size: 0;
+  }
+.title span{
+  display: inline-block;
+  padding: 15px;
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+  .continental_1962 .name,
+  .continental .name {
+    font-size: 11px;
+  }
+  
+.color_select a{
+  width: 80%;
+  }
+  input{
+    max-width: 2.3em;
+  }
+    
+    
+#card_face {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    margin-left: auto;
+}
+    
+    
+}
+
+@media screen and (orientation: landscape) {
+   /* 横向きの場合のスタイル */
+  #timerBox{
+    font-size: 262px;
+  }
+  .for-portrait{
+    display: none;
+  }
+}
+@media all and (orientation: portrait) {
+   /* 縦向きの場合のスタイル */
+    .left3 span,
+  .right3 span,
+  .center3 span{
+    display: none;
+    }
+  .info{
+    text-align: center;
+    line-height: 2.6;
+  }
+}
+
+
+
+@media screen and (max-width: 320px){
+  .num{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .name{
+    font-size: 11px;
+  }
+  input {
+    max-width: 1.2em;
+  }
+}

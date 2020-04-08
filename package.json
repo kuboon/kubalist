@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "license": "NOLICENSE",
+  "scripts": {
+    "build": "pwd"
+  },
+  "dependencies": {
+    "@firebase/app-types": "^0.6",
+    "uuid": "^7.0.3"
+  }
+}
