@@ -18,9 +18,11 @@ function shuffle(array) {
 }
 
 export default async (req: NowRequest, res: NowResponse) => {
+  res.setHeader('access-control-allow-origin', '*')
+  res.setHeader('access-control-allow-headers', 'origin,x-requested-with,content-type,accept')
   const id = v1()
   const cards = (req.query.cards as string).split(",")
   shuffle(cards)
-  await db.collection('rooms').doc(id).set({count: 0, cards, updated_at: admin.database.ServerValue.TIMESTAMP})
+  await db.collection('rooms').doc(id).set({count: 0, cards, created_at: new Date})
   res.json({id, cards})
 }

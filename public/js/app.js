@@ -1,14 +1,18 @@
+const server = "https://kubalist.kbn.one"
+const box1 = document.getElementById("box1")
+if(typeof fetch !== 'function'){
+  box1.innerText = "Internet Exproler は対応しておりません。 Edgeブラウザをご利用ください。"
+}
 async function main(){
   switch(location.pathname){
   case '/':
     document.getElementById("create").addEventListener('click', async _=>{
-      const json = await fetch("/api/create?cards=a,b,c,d,e,f,g,h", {method: 'POST'}).then(r=>r.json())
+      const json = await fetch(`${server}/api/create?cards=a,b,c,d,e,f,g,h`, {method: 'POST'}).then(r=>r.json())
       document.getElementById("url").value = `${location.href}room.html#${json.id}`
     })
     break;
   case '/room.html':
-    const box1 = document.getElementById("box1")
-    const res = await fetch(`/api/join?room=${location.hash.slice(1)}`)
+    const res = await fetch(`${server}/api/join?room=${location.hash.slice(1)}`)
     switch(res.status){
     case 404:
       box1.innerText = "URLをご確認ください。"

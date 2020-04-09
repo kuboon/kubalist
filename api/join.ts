@@ -10,6 +10,8 @@ admin.initializeApp({
 const db = admin.firestore()
 
 export default async (req: NowRequest, res: NowResponse) => {
+  res.setHeader('access-control-allow-origin', '*')
+  res.setHeader('access-control-allow-headers', 'origin,x-requested-with,content-type,accept')
   const docRef = await db.collection('rooms').doc(req.query.room as string)
   let card, count
   await db.runTransaction(async t=>{
