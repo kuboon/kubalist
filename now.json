@@ -1,5 +1,2 @@
 {
-  "env": {
-    "GOOGLE_APPLICATION_CREDENTIALS": "/api/firebase-auth.json"
-  }
 }
