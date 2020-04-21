@@ -10,7 +10,7 @@ function message(text){
   }, 5000)
 }
 
-const tags = new Tagify(e("cards"));
+const tags = new Tagify(e("cards"), {duplicates: true});
 
 let reset_url
 async function create(){
@@ -27,23 +27,5 @@ async function reset(){
     message("カードを配りなおしました。各自リロードしてください。")
   }else{
     message("カードの配りなおし失敗")
-  }
-}
-async function join(){
-  const res = await fetch(`${server}/api/join?room=${location.hash.slice(1)}`)
-  switch(res.status){
-  case 404:
-    box1.innerText = "URLをご確認ください。"
-    break;
-  case 400:
-    box1.innerText = "もうカードがありません。"
-    break;
-  default:
-    box1.innerText = "カードをタップしてください。"
-    const json = await res.json()
-    document.getElementById("card_face").attributes['src'].value = `/img/${json.card}.png`
-    $('#card_back').on('click', function() {
-      $('.card').toggleClass('is-surface').toggleClass('is-reverse');
-    });
   }
 }

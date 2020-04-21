@@ -8,22 +8,75 @@
       content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
     />
     <link rel="stylesheet" href="/assets/mvp.css" />
+    <style>
+      #card-container {
+        margin: auto;
+      }
+      #card-container > svg {
+        margin: auto;
+        max-height: 70vh;
+      }
+      #back {
+        transition-property: opacity;
+        transition-duration: 2s;
+      }
+      #back.hidden {
+        opacity: 0;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav>
-        <a href="https://kubalist.kbn.one/">Kubalist</a>
-      </nav>
-      <h1>クバリスト</h1>
+      <h2 id="msg">ロード中</h2>
     </header>
     <main>
-
+      <div id="card-container">
+        <svg viewBox="0 0 64 88">
+          <defs>
+            <pattern id="pattern_wnIG" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+              <rect width="100%" height="100%" fill="white" />
+              <line x1="0" y="0" x2="0" y2="6" stroke="#194d33" stroke-width="3" />
+              <line x1="0" y="0" x2="6" y2="0" stroke="#194d33" stroke-width="3" />
+            </pattern>
+          </defs>
+          <text id="text" text-anchor="middle" dominant-baseline="central" x="50%" y="50%" textlength="70%">人</text>
+          <rect x="2" y="2" width="60" height="84" rx="3" ry="3" stroke="gray" fill="none" />
+          <rect id="back" x="2" y="2" width="60" height="84" rx="3" ry="3" fill="url(#pattern_wnIG)" />
+        </svg>
+      </div>
     </main>
     <hr />
     <footer>
+      <p><a href="https://kubalist.kbn.one/">Kubalist</a></p>
       <p>
         <a href="https://kuboon.github.io" target="_blank">@Kuboon &nearr;</a>
       </p>
     </footer>
   </body>
+  <script>
+const msg = document.querySelector("#msg")
+const back = document.querySelector("#back")
+const text = document.querySelector("#text")
+
+async function join(){
+  const res = await fetch(`${location.origin}/api/join?room=${location.hash.slice(1)}`)
+  switch(res.status){
+  case 404:
+    msg.innerText = "URLをご確認ください"
+    break;
+  case 400:
+    msg.innerText = "もうカードがありません"
+    break;
+  default:
+    msg.innerText = "カードをタップしてください"
+    const json = await res.json()
+    text.textContent = json.card
+    text.style.fontSize = 60/(json.card.length*2-1)
+    back.addEventListener("click", e => {
+      back.classList.add("hidden")
+    })
+  }
+}
+join()
+  </script>
 </html>

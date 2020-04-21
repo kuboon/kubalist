@@ -9,7 +9,7 @@ async function main(){
   case '/bestact/':
     document.getElementById("create").addEventListener('click', async _=>{
       const json = await fetch(`${server}/api/create?cards=a,b,c,d,e,f,g,h`, {method: 'POST'}).then(r=>r.json())
-      document.getElementById("url").value = `${location.href}room.php#${json.id}`
+      document.getElementById("url").value = `${location.href}room.html#${json.id}`
       var room_url = document.getElementById("url").value;
       
       var room_url_encode = room_url.replace( '#', '%23' );
@@ -31,7 +31,7 @@ async function main(){
     })
       
     break;
-  case '/bestact/room.php':
+  case '/bestact/room.html':
     const res = await fetch(`${server}/api/join?room=${location.hash.slice(1)}`)
     switch(res.status){
     case 404:
