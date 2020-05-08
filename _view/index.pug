@@ -1,0 +1,78 @@
+doctype html
+html(lang='ja')
+  head
+    meta(charset='UTF-8')
+    title= (name ? name + " | " : "") + "Kubalist"
+    meta(name='viewport', content='initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no')
+    link(rel='stylesheet', href='/assets/mvp.css')
+    link(rel='stylesheet', href='/assets/tagify.css')
+    script(defer='', type='text/javascript', src='/assets/tagify.js')
+    script(defer='', type='text/javascript', src='/app.js')
+  body
+    header
+      nav
+        a(href='https://kubalist.kbn.one/') Kubalist
+        ul
+          li Home
+          li
+            a(href='#howto') 使い方
+          li
+            a(href='#api') API
+          li
+            a(href='https://www.github.com/kuboon/kubalist/', target='_blank') GitHub ↗
+      h1 クバリスト
+      h2 online card deal
+      p
+        | どんな
+        b カードセット
+        | でも、URLをシェアするだけで、1枚ずつ配れます。
+    main
+      section
+        header
+          p#message
+        form
+          div
+            label(for='cards') カードセット
+            input#cards(type='text', name='cards', size='28', value=cards)
+          button(onclick='create(); return false;') ルーム作成
+          #results(style='max-width: 100%;')
+        aside#room(style='display: none;')
+          p 以下のURLをメンバーにシェアしてください
+          input#room_url(type='text', onfocus='this.select()')
+          button(onclick='reset(); return false;') 配りなおす
+      hr
+      section#share
+        header
+          h2 このカードセットを保存・シェアする
+        form(onsubmit='save(); return false;')
+          div
+            label(for='cards') カードセット名
+            input#name(type='text', name='name', size='28', value=name required)
+          input(type="submit" value="保存・シェア")
+          p ボタンを押すとURLが変わりますので、それをブックマークすれば保存、Tweet等すればシェアできます。
+      hr
+      section#howto
+        header
+          h2 使い方
+        aside
+          h3 カードセット作る
+          p 何枚でもOK。カンマや改行区切りのテキストを入力してください。
+        aside
+          h3 ルーム作成
+          p URLが発行されるのでプレイヤーにシェアしてください。
+        aside
+          h3 カードをドロー
+          p 各プレイヤーはルームのカードをドローできます。すべてのカードがドローされるまで、何回でもドローできます。
+          p 同じメンバーで何度でも配りなおせます。
+        aside
+          h3 カードセットの保存、シェア
+          p
+            | カードセットに名前を付けて「保存・シェア」ボタンを押すとURLが変わります。そのURLをブックマークに保存したり、ツイートすることでカードセットをシェアできます。
+      hr
+    hr
+    footer
+      p
+        a(href='https://kuboon.github.io', target='_blank') @Kuboon ↗
+      p
+        | Sponsored by 
+        a(href='https://jellyjellycafe.com/') JELLYJELLYCAFE

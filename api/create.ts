@@ -11,6 +11,8 @@ export default async (req: NowRequest, res: NowResponse) => {
   const id = sha256().update(key).digest('hex')
   const cards = (req.query.cards as string).split(",")
   shuffle(cards)
-  await db.collection('rooms').doc(id).set({count: 0, cards, created_at: new Date})
+  const numbers = Array(cards.length).fill(null).map((_,i)=>i+1)
+  shuffle(numbers)
+  await db.collection('rooms').doc(id).set({count: 0, cards, numbers, created_at: new Date})
   res.json({key, id})
 }

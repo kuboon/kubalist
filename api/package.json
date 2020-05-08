@@ -12,5 +12,8 @@
     "firebase-admin": "^8.10.0",
     "hash.js": "^1.1.7",
     "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "pug": "^2.0.4"
   }
 }

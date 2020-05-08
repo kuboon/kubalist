@@ -29,3 +29,9 @@ async function reset(){
     message("カードの配りなおし失敗")
   }
 }
+async function save(){
+  const cards = tags.value.map(_=>_.value)
+  const name = e("name").value
+  //history.pushState({name, cards}, name, )
+  location.href = `${server}/saved/${name}/${cards}`
+}

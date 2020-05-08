@@ -15,9 +15,10 @@ export default async (req: NowRequest, res: NowResponse) => {
     const doc = await t.get(docRef)
     const data = doc.data()
     if(!data){res.status(404); return}
-    const {cards} = data
+    const {cards,numbers} = data
     shuffle(cards)
-    t.update(docRef, {cards, count: 0})
+    shuffle(numbers)
+    t.update(docRef, {cards, numbers, count: 0})
     res.json({ok: true})
   })
   res.end()

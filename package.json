@@ -1,0 +1,9 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "pug": "^2.0.4"
+  }
+}
