@@ -8,3 +8,4 @@ api/firebase-auth.json
 
 yarn-error.log
 api/_lib/firebase-auth.json
+public/index.html
