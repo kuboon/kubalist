@@ -3,6 +3,7 @@ html(lang='ja')
   head
     meta(charset='UTF-8')
     title= (name ? name + " | " : "") + "Kubalist"
+    meta(name="description" content='どんなカードセットでも、URLをシェアするだけで1枚ずつ配れます')
     meta(name='viewport', content='initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no')
     link(rel='stylesheet', href='/assets/mvp.css')
     link(rel='stylesheet', href='/assets/tagify.css')
@@ -83,10 +84,17 @@ html(lang='ja')
           p
             | カードセットに名前を付けて「保存・シェア」ボタンを押すとURLが変わります。そのURLをブックマークに保存したり、ツイートすることでカードセットをシェアできます。
       hr
+      section#api
+        header
+          h2 API
+        article
+          p KubalistはAPI化されており、静的サイトからJavaScriptで利用できます。
+          p 特定のゲーム専用のサイトを作成し、ご自身で用意したデザインのカードを配ることが出来ます。
+          p 詳細はソースコードを参照ください。
     hr
     footer
       p
-        a(href='https://kuboon.github.io', target='_blank') @Kuboon ↗
+        a(href='https://kuboon.github.io', target='_blank') @Kuboon
       p
         | Sponsored by 
         a(href='https://jellyjellycafe.com/') JELLYJELLYCAFE
