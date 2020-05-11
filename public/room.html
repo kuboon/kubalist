@@ -69,8 +69,8 @@ async function join(){
     msg.innerText = "もうカードがありません"
     break;
   default:
-    msg.innerText = "カードをタップしてください"
-    const json = await res.json()
+  const json = await res.json()
+    msg.innerHTML = `あなたのプレイヤー番号は<b>[${json.number}]</b>です。<br />カードをタップしてください`
     text.textContent = json.card
     text.style.fontSize = 60/(json.card.length*2-1)
     back.addEventListener("click", e => {

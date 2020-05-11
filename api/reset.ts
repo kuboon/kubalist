@@ -19,7 +19,7 @@ export default async (req: NowRequest, res: NowResponse) => {
     shuffle(cards)
     shuffle(numbers)
     t.update(docRef, {cards, numbers, count: 0})
-    res.json({ok: true})
+    res.json({ok: true, cards, numbers})
   })
   res.end()
 }

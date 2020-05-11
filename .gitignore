@@ -5,3 +5,6 @@ node_modules
 .env
 .env.build
 api/firebase-auth.json
+
+yarn-error.log
+api/_lib/firebase-auth.json

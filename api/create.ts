@@ -14,5 +14,5 @@ export default async (req: NowRequest, res: NowResponse) => {
   const numbers = Array(cards.length).fill(null).map((_,i)=>i+1)
   shuffle(numbers)
   await db.collection('rooms').doc(id).set({count: 0, cards, numbers, created_at: new Date})
-  res.json({key, id})
+  res.json({key, id, cards, numbers})
 }

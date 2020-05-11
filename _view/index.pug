@@ -8,8 +8,20 @@ html(lang='ja')
     link(rel='stylesheet', href='/assets/tagify.css')
     script(defer='', type='text/javascript', src='/assets/tagify.js')
     script(defer='', type='text/javascript', src='/app.js')
+    style.
+      #message {
+        opacity: 0;
+        position: fixed;
+        transition: opacity 1s;
+        z-index: 5
+      }
+      #message.show {
+        opacity: 100%;
+      }
   body
     header
+      article
+        aside#message
       nav
         a(href='https://kubalist.kbn.one/') Kubalist
         ul
@@ -19,7 +31,7 @@ html(lang='ja')
           li
             a(href='#api') API
           li
-            a(href='https://www.github.com/kuboon/kubalist/', target='_blank') GitHub ↗
+            a(href='https://www.github.com/kuboon/kubalist/', target='_blank') GitHub
       h1 クバリスト
       h2 online card deal
       p
@@ -28,18 +40,20 @@ html(lang='ja')
         | でも、URLをシェアするだけで、1枚ずつ配れます。
     main
       section
-        header
-          p#message
-        form
+        aside
           div
             label(for='cards') カードセット
             input#cards(type='text', name='cards', size='28', value=cards)
           button(onclick='create(); return false;') ルーム作成
-          #results(style='max-width: 100%;')
         aside#room(style='display: none;')
           p 以下のURLをメンバーにシェアしてください
-          input#room_url(type='text', onfocus='this.select()')
-          button(onclick='reset(); return false;') 配りなおす
+          input#room_url(type='text' style="box-sizing: border-box; width: 100%" onfocus='this.select()')
+          p すべてのカードを回収して同じルームの参加者に配りなおすことが出来ます。下のボタンを押したのち、各プレイヤーはページをリロードしてください。
+          button(onclick='reset(this)') 配りなおす
+        aside#list(style='display: none;')
+          p ゲームマスターは、プレイヤー番号と配られたカードの対応表を見ることができます。プレイヤー番号はランダムであり、プレイヤー同士は番号からカードを知ることは出来ません。
+          button(onclick='view(); return false;') 配られたカード
+          table#table
       hr
       section#share
         header
