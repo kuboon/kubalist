@@ -1,10 +1,20 @@
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/kuboon/kubalist) 
-
 # Kubalist - online card deal
+
 どんなカードセットでも、URLをシェアするだけで、1枚ずつ配れます。
 
-## Deploy Your Own
+# Fresh project
 
-Deploy your own Custom Built project with Vercel Now.
+Your new Fresh project is ready to go. You can follow the Fresh "Getting
+Started" guide here: https://fresh.deno.dev/docs/getting-started
 
-[![Deploy with Vercel Now](https://vercel.co/button)](https://vercel.co/import/project?template=https://github.com/kuboon/kubalist/tree/master)
+### Usage
+
+Make sure to install Deno: https://deno.land/manual/getting_started/installation
+
+Then start the project:
+
+```
+deno task start
+```
+
+This will watch the project directory and restart as necessary.

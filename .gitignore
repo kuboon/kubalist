@@ -1,11 +1,9 @@
-node_modules
-
-# Environment Variables
+# dotenv environment variable files
 .env
-.env.build
-api/firebase-auth.json
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
-yarn-error.log
-api/_lib/firebase-auth.json
-public/index.html
-.vercel
+# Fresh build directory
+_fresh/
