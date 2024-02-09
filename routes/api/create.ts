@@ -1,11 +1,11 @@
 import { jsonResponse, sha256, shuffle } from "./_lib/mod.ts";
 import { kv } from "./_lib/db.ts";
-import { HandlerContext } from "$fresh/server.ts";
+import { FreshContext } from "$fresh/server.ts";
 import { v1 } from "$std/uuid/mod.ts";
 
 export const handler = async (
   req: Request,
-  _ctx: HandlerContext,
+  _ctx: FreshContext,
 ): Promise<Response> => {
   const url = new URL(req.url);
   const cards = url.searchParams.get('cards')!.split(",");

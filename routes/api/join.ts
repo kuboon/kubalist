@@ -1,10 +1,10 @@
-import { HandlerContext } from "$fresh/server.ts";
 import { getRoom, kv } from "./_lib/db.ts";
 import { jsonResponse } from "./_lib/mod.ts";
+import { FreshContext } from "$fresh/server.ts";
 
 export const handler = async (
   req: Request,
-  _ctx: HandlerContext,
+  _ctx: FreshContext,
 ): Promise<Response> => {
   const url = new URL(req.url);
   const roomRes = await getRoom(url.searchParams.get("room")!);
