@@ -13,7 +13,7 @@ import * as $bestact from "./routes/bestact.ts";
 import * as $index from "./routes/index.ts";
 import * as $saved_name_cards_ from "./routes/saved/[name]/[cards].ts";
 
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {

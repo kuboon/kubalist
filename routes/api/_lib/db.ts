@@ -10,4 +10,4 @@ export type Room = {
 
 export const getRoom = async (id: string) => {
   return await kv.get<Room>(["rooms", id]);
-}
+};

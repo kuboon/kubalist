@@ -6,7 +6,6 @@ html {
   height: 100%;
 }
 
-
 /*  --BODY--  */
 
 body {
@@ -18,8 +17,10 @@ body {
 
   word-wrap: break-word;
   overflow: visible;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Helvetica, sans-serif;
-/*  font-family: 'Anton', sans-serif; */
+  font-family:
+    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", Arial, Helvetica, sans-serif;
+  /*  font-family: 'Anton', sans-serif; */
   background: #ddd;
   font-size: 16px;
   line-height: 1.5;
@@ -34,7 +35,7 @@ img {
   max-width: 100%;
 }
 .for3players,
-.for4players{
+.for4players {
   display: none;
   margin-top: 32px;
 }
@@ -112,10 +113,9 @@ tt {
   line-height: 100%;
 }
 
-
 /*  for IE7  */
 
-*+html code,
+* + html code,
 kbd,
 pre,
 samp,
@@ -124,7 +124,7 @@ tt {
 }
 
 .for-sp {
-  display: none!important;
+  display: none !important;
 }
 
 #timerBox {
@@ -139,16 +139,16 @@ tt {
   background: #fff;
 }
 
-input{
+input {
   max-width: 3.3em;
   text-align: right;
 }
 
-.title{
+.title {
   text-align: center;
   line-height: 1;
 }
-.title span{
+.title span {
   display: inline-block;
   padding: 15px;
   margin: 0 6px;
@@ -185,7 +185,7 @@ input{
   border: none;
   cursor: default;
 }
-#timerSetting .theme-box div{
+#timerSetting .theme-box div {
   cursor: pointer;
   width: auto;
   height: auto;
@@ -195,12 +195,11 @@ input{
   padding: 4px 10px;
 }
 
-
 #timerSetting div:hover {
   color: #000;
   border-color: #000;
 }
-.scroll_down{
+.scroll_down {
   position: fixed;
   z-index: 9;
   bottom: 40px;
@@ -210,60 +209,78 @@ input{
   right: 0;
   text-align: center;
 }
-.scroll_down i{
+.scroll_down i {
   font-size: 82px;
   display: block;
   animation: vertical 1s ease-in-out infinite alternate;
 }
 @keyframes horizontal {
-    0% { transform:translateX( -3px); }
-  100% { transform:translateX(  0px); }
+  0% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 @keyframes vertical {
-    0% { transform:translateY(-10px); }
-  100% { transform:translateY(  0px); }
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-.bg01 #timerBox{
+.bg01 #timerBox {
   background-color: #f00;
   animation: bg-color 1s infinite;
   -webkit-animation: bg01 1s infinite;
 }
 
 @-webkit-keyframes bg01 {
-  0% { background-color: #f00; }
-  50% { background-color: #333; }
-  100% { background-color: #f00; }
+  0% {
+    background-color: #f00;
+  }
+  50% {
+    background-color: #333;
+  }
+  100% {
+    background-color: #f00;
+  }
 }
 @keyframes bg01 {
-  0% { background-color: #f00; }
-  50% { background-color: #333; }
-  100% { background-color: #f00; }
+  0% {
+    background-color: #f00;
+  }
+  50% {
+    background-color: #333;
+  }
+  100% {
+    background-color: #f00;
+  }
 }
 
-
-.acquire_table{
+.acquire_table {
   border-top: 1px solid #ccc;
   width: 100%;
   max-width: 800px;
   margin: 10px auto;
 }
-.acquire_table tr{
-  border-bottom:1px solid #ccc;
+.acquire_table tr {
+  border-bottom: 1px solid #ccc;
 }
 
 .acquire_table th,
-.acquire_table td{
+.acquire_table td {
   padding: 10px 2px;
   text-align: center;
   font-size: 13px;
 }
 
-
-.acquire_table th{
+.acquire_table th {
   font-weight: bold;
 }
-.name{
+.name {
   text-align: left;
   display: inline-block;
   cursor: pointer;
@@ -276,7 +293,7 @@ input{
   color: #fff;
   text-transform: uppercase;
 }
-.num{
+.num {
   display: inline-block;
   cursor: pointer;
   float: left;
@@ -284,10 +301,10 @@ input{
   margin-right: 2px;
   vertical-align: middle;
 }
-.tertiary_switch_parent{
+.tertiary_switch_parent {
   text-align: center;
 }
-.tertiary_switch{
+.tertiary_switch {
   max-width: 400px;
   width: 80%;
   width: 45%;
@@ -301,26 +318,24 @@ input{
   border: 1px solid #ccc;
 }
 .tertiary_flag_off .title_secondary,
-.tertiary_flag_off .secondary{
+.tertiary_flag_off .secondary {
   display: none;
 }
 
 .tertiary_flag .tertiary_switch_sinai,
-.tertiary_switch_suru{
-}
+.tertiary_switch_suru {}
 .tertiary_switch_sinai,
-.tertiary_flag .tertiary_switch_suru{
-}
-.btn{
+.tertiary_flag .tertiary_switch_suru {}
+.btn {
   text-align: center;
 }
 .btn a,
-.btn span{
+.btn span {
   cursor: pointer;
   display: inline-block;
   font-size: 13px;
   margin: 0 5px;
-     padding: 4px 2px;
+  padding: 4px 2px;
   background: #222;
   color: #fff;
   text-decoration: none;
@@ -330,53 +345,51 @@ input{
   border-radius: 33px;
   padding: 8px 30px;
 }
-.btn a.current{
+.btn a.current {
   text-decoration: none;
   background: #999;
   cursor: default;
-     padding: 4px 9px;
+  padding: 4px 9px;
   border-radius: 12px;
   background: #111;
   color: #fff;
 }
-.color_select{
+.color_select {
   display: none;
 }
-.start_clicked .color_select{
-}
-.tagiron_link{
+.start_clicked .color_select {}
+.tagiron_link {
   text-align: center;
   margin-top: 33px;
 }
 
-.tagiron_link p{
+.tagiron_link p {
   font-size: 13px;
   letter-spacing: 0.1em;
 }
 
-
-.txt01{
+.txt01 {
   font-size: 14px;
   margin-top: 30px;
   text-align: center;
 }
 
-.color_select{
+.color_select {
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.1em;
 }
-.color_select p{
+.color_select p {
   margin-top: 22px;
   margin-bottom: 12px;
 }
 .color_select span,
-.color_select a{
+.color_select a {
   padding: 24px;
   margin-bottom: 22px;
   text-decoration: none;
   border-radius: 10px;
-  border:9px solid #111;
+  border: 9px solid #111;
   background: #fff;
   display: inline-block;
   vertical-align: top;
@@ -385,16 +398,16 @@ input{
 }
 
 .color_select span:hover,
-.color_select a:hover{
+.color_select a:hover {
   opacity: 0.82;
 }
 
-.color_select a img{
+.color_select a img {
   width: 57%;
   margin-top: 20px;
 }
 
-.players_select{
+.players_select {
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.1em;
@@ -402,189 +415,181 @@ input{
   margin-bottom: 12px;
 }
 .players_select_red,
-.players_select_yellow{
+.players_select_yellow {
   display: none;
 }
 
-.players_select p{
+.players_select p {
   margin-top: 22px;
   margin-bottom: 12px;
 }
-.players_select a{
-padding: 20px 0;
-    margin-bottom: 22px;
-    text-decoration: none;
-    border-radius: 10px;
-    border: 9px solid #111;
-    background: #fff;
-    display: inline-block;
-    vertical-align: top;
-    width: 24%;
-    cursor: pointer;
+.players_select a {
+  padding: 20px 0;
+  margin-bottom: 22px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 9px solid #111;
+  background: #fff;
+  display: inline-block;
+  vertical-align: top;
+  width: 24%;
+  cursor: pointer;
 }
 
-.players_select a:hover{
- background: #eee; 
+.players_select a:hover {
+  background: #eee;
 }
 
-textarea{
+textarea {
   width: 95%;
 }
-.num6and9{
+.num6and9 {
   text-decoration: underline;
 }
 
 .logo {
   text-align: center;
   margin-top: 39px;
-} 
-.logo img{
+}
+.logo img {
   max-width: 800px;
   width: 88%;
 }
 
-
-.reset_txt{
+.reset_txt {
   text-align: center;
 }
-table .fa-redo{
+table .fa-redo {
   float: right;
   margin-right: 6px;
   cursor: pointer;
   margin-top: 4px;
 }
-.BOLT .name{
-  background-color: #FF986A;
+.BOLT .name {
+  background-color: #ff986a;
 }
-.ECHO .name{
-  background-color: #7EB2B9;
+.ECHO .name {
+  background-color: #7eb2b9;
 }
-.FLEET .name{
-  background-color: #E8C26A;
+.FLEET .name {
+  background-color: #e8c26a;
 }
-.ETCH .name{
+.ETCH .name {
   background-color: #446643;
 }
-.ROVE .name{
-  background-color: #984E69;
+.ROVE .name {
+  background-color: #984e69;
 }
-.SPARK .name{
-  background-color: #F1564C;
+.SPARK .name {
+  background-color: #f1564c;
 }
-.NESTOR .name{
-  background-color :darkmagenta;
-}
-
-
-
-.SACKSON .name{
-  background-color: #D44339;
-}
-.ZETA .name{
-  background-color: #F6C41E;
-}
-.HYDRA .name{
-  background-color: #EB8126;
-}
-.FUSION .name{
-  background-color: #3B6F24;
-}
-.AMERICA .name{
-  background-color: #3A62A5;
-}
-.PHOENIX .name{
-  background-color: #57548D;
-}
-.QUANTUM .name{
-  background-color :#0A7168;
+.NESTOR .name {
+  background-color: darkmagenta;
 }
 
+.SACKSON .name {
+  background-color: #d44339;
+}
+.ZETA .name {
+  background-color: #f6c41e;
+}
+.HYDRA .name {
+  background-color: #eb8126;
+}
+.FUSION .name {
+  background-color: #3b6f24;
+}
+.AMERICA .name {
+  background-color: #3a62a5;
+}
+.PHOENIX .name {
+  background-color: #57548d;
+}
+.QUANTUM .name {
+  background-color: #0a7168;
+}
 
-.worldwide .name{
-  background-color: #57548D;
+.worldwide .name {
+  background-color: #57548d;
 }
-.sackson .name{
-  background-color: #EB8126;
+.sackson .name {
+  background-color: #eb8126;
 }
-.festival .name{
-  background-color: #3B6F24;
+.festival .name {
+  background-color: #3b6f24;
 }
-.imperial .name{
-  background-color: #F6C41E;
+.imperial .name {
+  background-color: #f6c41e;
 }
-.american .name{
-  background-color: #3A62A5;
+.american .name {
+  background-color: #3a62a5;
 }
-.continental .name{
-  background-color: #D44339;
+.continental .name {
+  background-color: #d44339;
 }
-.tower .name{
-  background-color :#999;
+.tower .name {
+  background-color: #999;
 }
 
-.worldwide_1962 .name{
+.worldwide_1962 .name {
   background-color: #895c3d;
 }
-.luxor_1962 .name{
+.luxor_1962 .name {
   background-color: #fd799a;
 }
-.festival_1962 .name{
-  background-color: #3B6F24;
+.festival_1962 .name {
+  background-color: #3b6f24;
 }
-.imperial_1962 .name{
-  background-color: #D44339;
+.imperial_1962 .name {
+  background-color: #d44339;
 }
-.american_1962 .name{
-  background-color: #3A62A5;
+.american_1962 .name {
+  background-color: #3a62a5;
 }
-.continental_1962 .name{
-  background-color: #7EB2B9;
+.continental_1962 .name {
+  background-color: #7eb2b9;
 }
-.tower_1962 .name{
-  background-color :#F6C41E;
+.tower_1962 .name {
+  background-color: #f6c41e;
 }
-
 
 .tertiary_flag_off .daisan,
-.daini{
+.daini {
   display: none;
 }
 
-.tertiary_flag_off .daini{
+.tertiary_flag_off .daini {
   display: inline;
 }
 
 .tertiary_switch_sinai,
-.tertiary_switch_suru{
+.tertiary_switch_suru {
   color: #999;
 }
 
 .tertiary_switch_sinai:hover,
-.tertiary_switch_suru:hover{
+.tertiary_switch_suru:hover {
   color: #fff;
   background: #666;
 }
-.tertiary_switch{
+.tertiary_switch {
   font-size: 14px;
 }
 .tertiary_flag_off .tertiary_switch_sinai,
-.tertiary_flag_on .tertiary_switch_suru{
+.tertiary_flag_on .tertiary_switch_suru {
   background: #111;
   cursor: default;
   color: #fff;
 }
 
-
-
-
-.tiles{
+.tiles {
   text-align: center;
   display: flex;
   justify-content: center;
   margin: 10px 1% 10px;
   position: relative;
 }
-.tile{
+.tile {
   width: 19%;
   margin: 0 0.5%;
   border: 1px solid #ccc;
@@ -596,7 +601,7 @@ table .fa-redo{
   cursor: pointer;
   position: relative;
 }
-.tile_bg{
+.tile_bg {
   border-radius: 8px;
   box-sizing: border-box;
   height: 130px;
@@ -608,7 +613,7 @@ table .fa-redo{
   right: 0;
   bottom: 0;
 }
-.tiles .tile input{
+.tiles .tile input {
   z-index: 9;
   background: #fff;
   position: absolute;
@@ -618,7 +623,7 @@ table .fa-redo{
   margin-left: -22px;
 }
 .red_tiles,
-.blue_tiles{
+.blue_tiles {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -626,79 +631,79 @@ table .fa-redo{
   color: #fff;
   margin-top: 6px;
 }
-.red_tiles .tile{
+.red_tiles .tile {
   cursor: pointer;
   border: none;
-  background: #D90000;
+  background: #d90000;
 }
-.blue_tiles .tile{
+.blue_tiles .tile {
   cursor: pointer;
   border: none;
-  background: #006DD9;
+  background: #006dd9;
 }
 
-.red{
-  color: #D90000;
+.red {
+  color: #d90000;
 }
-.blue{
-  color: #006DD9;
+.blue {
+  color: #006dd9;
 }
-.bg_red{
-  background: #D90000;
+.bg_red {
+  background: #d90000;
 }
-.bg_yellow{
+.bg_yellow {
   background: #ffff00;
 }
-.bg_blue{
-  background: #006DD9;
+.bg_blue {
+  background: #006dd9;
 }
 .red_tiles .tile.yellow_tile,
-.blue_tiles .tile.yellow_tile{
- color:#111;
+.blue_tiles .tile.yellow_tile {
+  color: #111;
   background: #ffff00;
 }
 
 .red_tiles .tile.tile_switch,
-.blue_tiles .tile.tile_switch{
+.blue_tiles .tile.tile_switch {
   background: #eee;
   color: #ccc;
 }
 
-.left3{
-  background: rgba(0,0,0,0.07);
+.left3 {
+  background: rgba(0, 0, 0, 0.07);
   position: absolute;
-  top:77px;
+  top: 77px;
   left: 0.5%;
   width: 59%;
   font-size: 11px;
 }
 
-.center3{
-  background: rgba(0,0,0,0.07);
+.center3 {
+  background: rgba(0, 0, 0, 0.07);
   position: absolute;
-  top:3px;
+  top: 3px;
   left: 20.5%;
   width: 59%;
   font-size: 11px;
 }
 
-.right3{
-  background: rgba(0,0,0,0.07);
+.right3 {
+  background: rgba(0, 0, 0, 0.07);
   position: absolute;
-  top:102px;
+  top: 102px;
   right: 0.5%;
   width: 59%;
   font-size: 11px;
 }
 .right3 input,
 .left3 input,
-.center3 input{
+.center3 input {
   padding: 0 3px 0 0;
   max-width: 3.3em;
   width: 3.8em;
 }
 .red_tiles .tile,
-.blue_tiles .tile{
+.blue_tiles .tile {
   width: 9%;
   margin: 0 0.5%;
   border: none;
@@ -709,62 +714,63 @@ table .fa-redo{
   font-size: 29px;
   font-weight: bold;
 }
-.info{
+.info {
   line-height: 1.8;
   margin: 0 1%;
   font-size: 13px;
 }
-.info input{
+.info input {
   padding: 0px 3px 0 0;
   margin: 0 5px 3px;
 }
-.room_url_done{
+.room_url_done {
   margin-top: 20px;
   font-size: 18px;
 }
-.room_url{
+.room_url {
   display: none;
 }
-.room_url_text{
-    margin: 20px auto 20px;
-    font-weight: bold;
+.room_url_text {
+  margin: 20px auto 20px;
+  font-weight: bold;
 }
-.room_url_link{
+.room_url_link {
   margin-top: 20px;
 }
-.room_url_link a{
-    text-decoration: none;
-    background: #ccc;
-    border-radius: 12px;
-    padding: 12px 20px;
-    font-size: 18px;
-    font-weight: bold;
+.room_url_link a {
+  text-decoration: none;
+  background: #ccc;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
-.room_url_refresh{
+.room_url_refresh {
   margin-top: 20px;
   text-align: center;
   margin-bottom: 30px;
 }
-header{
+header {
   margin-bottom: 22px;
 }
-h1{
+h1 {
   text-align: center;
   font-size: 43px;
-  font-family: 'Patua One', cursive,'arial black','Hiragino Kaku Gothic ProN',"impact";
+  font-family:
+    "Patua One", cursive, "arial black", "Hiragino Kaku Gothic ProN", "impact";
   letter-spacing: 0.1em;
   margin-bottom: 2px;
   margin-top: 23px;
   line-height: 1;
   font-weight: bold;
 }
-h2{
+h2 {
   letter-spacing: 0.4em;
   text-align: center;
   font-size: 15px;
 }
 #box1,
-.box1{
+.box1 {
   text-align: center;
   background: #fff;
   border-radius: 12px;
@@ -773,59 +779,51 @@ h2{
   font-size: 13px;
 }
 
-.copyright{
+.copyright {
   font-size: 11px;
   margin-top: 29px;
   text-align: center;
   color: #999;
 }
 
-.card{
-    text-align: center;
+.card {
+  text-align: center;
 }
-.card img{
-    max-width: 400px;
-    width: 90%;
+.card img {
+  max-width: 400px;
+  width: 90%;
 }
 
 .card {
-    position: relative;
+  position: relative;
 }
 #card_back {
-    position: absolute;
-    left: 50%;
-    margin-left: -200px;
-    cursor: pointer;
+  position: absolute;
+  left: 50%;
+  margin-left: -200px;
+  cursor: pointer;
 }
- 
+
 /* 表面の表示 */
 .is-surface #card_face {
-    opacity: 1;
-    transform: rotateY(0deg);
-    transition:
-        opacity 100ms 150ms,
-        transform 300ms 150ms;
+  opacity: 1;
+  transform: rotateY(0deg);
+  transition: opacity 100ms 150ms, transform 300ms 150ms;
 }
 .is-surface #card_back {
-    opacity: 0;
-    transform: rotateY(90deg);
-    transition:
-        opacity 50ms 200ms,
-        transform 300ms;
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: opacity 50ms 200ms, transform 300ms;
 }
- 
+
 /* 裏面の表示 */
 .is-reverse #card_face {
-    opacity: 0;
-    transform:rotateY(90deg);
-    transition:
-        opacity 50ms 200ms,
-        transform 300ms;
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: opacity 50ms 200ms, transform 300ms;
 }
 .is-reverse #card_back {
-    opacity: 1;
-    transform:rotateY(0deg);
-    transition:
-        opacity 100ms 150ms,
-        transform 300ms 150ms;
+  opacity: 1;
+  transform: rotateY(0deg);
+  transition: opacity 100ms 150ms, transform 300ms 150ms;
 }

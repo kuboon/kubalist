@@ -8,7 +8,7 @@ export const handler = async (
   _ctx: FreshContext,
 ): Promise<Response> => {
   const url = new URL(req.url);
-  const cards = url.searchParams.get('cards')!.split(",");
+  const cards = url.searchParams.get("cards")!.split(",");
   shuffle(cards);
   const numbers = Array(cards.length)
     .fill(null)

@@ -2,7 +2,10 @@ import { getRoom, kv } from "./_lib/db.ts";
 import { jsonResponse, sha256, shuffle } from "./_lib/mod.ts";
 import { FreshContext } from "$fresh/server.ts";
 
-export const handler = async (req: Request, _ctx: FreshContext): Promise<Response> => {
+export const handler = async (
+  req: Request,
+  _ctx: FreshContext,
+): Promise<Response> => {
   const url = new URL(req.url);
   const key = url.searchParams.get("key")!;
   const roomId = url.searchParams.get("room")!;
@@ -22,7 +25,7 @@ export const handler = async (req: Request, _ctx: FreshContext): Promise<Respons
   await kv.atomic()
     .check(roomRes)
     .set(roomRes.key, { cards, numbers, count: 0 })
-    .commit(); 
-  
+    .commit();
+
   return jsonResponse({ ok: true, cards, numbers });
 };
